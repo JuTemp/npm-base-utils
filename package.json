@@ -1,0 +1,42 @@
+{
+    "name": "@jtp0415/base-utils",
+    "version": "1.0.1",
+    "description": "This is a base-util repo. Import into all of projects. --JuTemp",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "format": "npx prettier . --write",
+        "format:slient": "npx prettier src --write 2>/dev/null | sed '/prettier/d' | sed -e '/^package/d' | cut -d ' ' -f 1 | cut -d '/' -f 2 | sort | uniq | paste -s -d ' ' | sed 's/ /  /g'",
+        "build": "npm run format:slient && npx vite build",
+        "build:dev": "npm run format:slient && npx vite build --mode debug",
+        "build:pro": "npm run format:slient && npx vite build --mode production",
+        "build:prod": "npm run format:slient && npx vite build --mode production",
+
+        "f": "npx prettier . --write",
+        "f:s": "npx prettier src --write 2>/dev/null | sed '/prettier/d' | sed -e '/^package/d' | cut -d ' ' -f 1 | cut -d '/' -f 2 | sort | uniq | paste -s -d ' ' | sed 's/ /  /g'",
+        "b": "npm run format:slient && npx vite build",
+        "b:d": "npm run format:slient && npx vite build --mode debug",
+        "b:p": "npm run format:slient && npx vite build --mode production"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/JuTemp/npm-base-utils.git"
+    },
+    "author": "JuTemp",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/JuTemp/npm-base-utils/issues"
+    },
+    "homepage": "https://github.com/JuTemp/npm-base-utils#readme",
+    "dependencies": {
+        "ws": "^8.18.1"
+    },
+    "devDependencies": {
+        "@rollup/plugin-node-resolve": "^16.0.1",
+        "@types/node": "^22.14.1",
+        "@types/ws": "^8.18.1",
+        "prettier": "^3.5.3",
+        "typescript": "^5.8.3",
+        "vite": "^6.2.6"
+    }
+}
