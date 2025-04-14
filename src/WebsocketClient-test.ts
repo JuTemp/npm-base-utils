@@ -19,3 +19,10 @@ ws.send({
 ws.onmessage((message) => {
     console.log(message);
 });
+
+ws.onclose(() => console.log("close"));
+setTimeout(() => ws.close(), 2000);
+
+setTimeout(() => {
+    /* prevent from exiting quickly */
+}, 1000);
