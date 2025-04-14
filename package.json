@@ -11,7 +11,6 @@
         "build:dev": "npm run format:slient && npx vite build --mode debug",
         "build:pro": "npm run format:slient && npx vite build --mode production",
         "build:prod": "npm run format:slient && npx vite build --mode production",
-
         "f": "npx prettier . --write",
         "f:s": "npx prettier src --write 2>/dev/null | sed '/prettier/d' | sed -e '/^package/d' | cut -d ' ' -f 1 | cut -d '/' -f 2 | sort | uniq | paste -s -d ' ' | sed 's/ /  /g'",
         "b": "npm run format:slient && npx vite build",
@@ -29,6 +28,7 @@
     },
     "homepage": "https://github.com/JuTemp/npm-base-utils#readme",
     "dependencies": {
+        "redis": "^4.7.0",
         "ws": "^8.18.1"
     },
     "devDependencies": {
