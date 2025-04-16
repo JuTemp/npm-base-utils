@@ -1,6 +1,6 @@
 {
     "name": "@jtp0415/base-utils",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "This is a base-util repo. Import into all of projects. --JuTemp",
     "main": "index.js",
     "type": "module",
